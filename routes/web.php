@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -38,3 +41,13 @@ Route::get('/number', function () {
 Route::view('contact', 'contact')->name('contact');
 Route::view('about', 'about')->name('about');
 Route::view('article', 'article')->name('article');
+
+
+//Route::get('/', function () {
+//    $categories = DB::table('categories')->get();
+//    return view('home', ['categories' => $categories]);
+//})->name('home');
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('posts/{post}', [PostController::class, 'show'])->name('post.show');

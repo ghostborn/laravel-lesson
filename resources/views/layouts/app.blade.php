@@ -9,7 +9,7 @@
 <body class="bg-gray-100 text-gray-900">
 <header class="bg-white shadow-md py-4">
     <div class="container mx-auto flex justify-between items-center px-6">
-        <a href="{{route('home')}}"><h1 class="text-xl font-bold">Brand</h1></a>
+        <a href="{{route('home')}}"><h1 class="text-xl font-bold">My Blog</h1></a>
         <nav>
             <ul class="flex space-x-6">
                 <li><a href="{{route('about')}}" class="hover:text-blue-500">About Us</a></li>
